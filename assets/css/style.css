@@ -85,6 +85,7 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   font-family: sans-serif;
+  background: #ccc;
 }
 
 a { 
@@ -103,6 +104,12 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
+:root {
+  --primary-color:#ff4b36;
+  --secondary-color:#6f6f6f;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -126,35 +133,98 @@ header .wrapper {
   main styling starts here
 =================================*/
 
+h3 {
+  margin: 73px 0;
+  font-size: 34px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
 
+ h3::before,
+ h3::after {
+  content: '';
+  height: 5px;
+  background: var(--primary-color);
+  position: absolute;
+}
 
+ h3::before {
+  width: 4%;
+  top: 140%;
+}
 
+ h3::after {
+  width: 2.5%;
+  top: 119%;
+  left: 0;
+}
 
+.services {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.service {
+  margin: 0 3.7% 14px 0;
+  padding: 20px;
+  padding-bottom: 22px;
+  background: #fff;
+  border: 1px solid #ccc;
+  flex-basis: 27.3%;
+  transition: all .4s ease;
+}
 
+.service:hover {  
+  box-shadow: 10px 10px rgba(0,0,0,0.4);
+  transform: translateY(-5px);
+ }
+
+.services li:nth-child(3),
+.services li:nth-child(6) { margin: 0 0 14px 0;}
+
+.serve-head { border-bottom: 5px solid #efefef ;}
+
+.serve-head a {
+  padding: 20px 0 18px;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.serve-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.serve-body h4 {
+  margin: 25px 0 27px;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.serve-body p {
+  margin-bottom: 24px;
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+.serve-body a {
+  width: 27%;
+  font-size: 18px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.serve-body a:hover , .serve-head a:hover { color: #ccc; }
+
+.readMore { 
+  opacity: 0; 
+  transition: all 0.4s ease-in-out;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
