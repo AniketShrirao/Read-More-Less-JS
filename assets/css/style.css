@@ -225,6 +225,11 @@ h3 {
   transition: all 0.4s ease-in-out;
 }
 
+.readLess {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
 /*=================================
   main styling ends here
 =================================*/
